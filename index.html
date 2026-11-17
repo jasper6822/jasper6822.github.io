@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>周希妍无极圣光-网络小说人物与设定解析</title>
+<meta name="description" content="周希妍无极圣光是网络小说中的角色与能力设定组合，梳理该人物的出场章节、能力规则、读者讨论分歧与同人创作脉络，并整理可核对的版本差异与阅读顺序建议。">
+<meta name="keywords" content="周希妍无极圣光">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231a2340'/%3E%3Cpath d='M32 10l5 17 17 5-17 5-5 17-5-17-17-5 17-5z' fill='%23e8b64c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1a2340;
+  --ink-2:#2b3556;
+  --paper:#f6f3ec;
+  --card:#ffffff;
+  --gold:#b8872b;
+  --gold-soft:#e8b64c;
+  --teal:#1f6b64;
+  --line:#dcd5c5;
+  --muted:#6a6557;
+  --shadow:0 2px 10px rgba(26,35,64,.08);
+  --radius:10px;
+  --gap:clamp(14px,2.2vw,26px);
+  --maxw:1180px;
+  --fs-body:16px;
+  --announce-h:38px;
+  --head-h:62px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Songti SC","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:var(--fs-body);
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3,h4{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.35;margin:0}
+p{margin:0 0 .85em}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(14px,3vw,28px)}
+:target{scroll-margin-top:calc(var(--announce-h) + var(--head-h) + 14px)}
+
+/* 吸顶公告 + 页头 */
+.stickbar{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--ink);color:#f1ead8;font-size:13.5px;
+  height:var(--announce-h);display:flex;align-items:center;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.announce .wrap{display:flex;gap:12px;align-items:center;width:100%}
+.announce b{color:var(--gold-soft);font-weight:600;letter-spacing:.5px}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-soft);flex:0 0 auto}
+.announce a{color:#f1ead8;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.announce .txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+header.site{
+  background:rgba(246,243,236,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  height:var(--head-h);
+  display:flex;align-items:center;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+header.site .wrap{display:flex;align-items:center;gap:18px;width:100%}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;font-weight:700;font-size:17px;color:var(--ink);letter-spacing:.5px}
+.brand:hover{text-decoration:none}
+.brand svg{width:30px;height:30px;flex:0 0 auto}
+nav.mainnav{flex:1 1 auto;display:flex;gap:4px;font-size:14px}
+nav.mainnav a{padding:6px 9px;border-radius:6px;color:var(--ink-2)}
+nav.mainnav a:hover{background:#ece5d6;text-decoration:none}
+.nav-toggle{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--ink);cursor:pointer}
+.nav-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.searchbox{display:flex;align-items:center;gap:6px;flex:0 0 auto}
+.searchbox input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;
+  background:#fff;font-size:13.5px;color:var(--ink);font-family:inherit;
+}
+.searchbox input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.searchbox button{
+  border:0;background:var(--ink);color:#f3ead7;border-radius:999px;padding:6px 13px;
+  font-size:13.5px;cursor:pointer;font-family:inherit;
+}
+.searchbox button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 420px at 78% -10%, rgba(232,182,76,.28), transparent 62%),
+    radial-gradient(760px 320px at 8% 110%, rgba(31,107,100,.16), transparent 60%),
+    linear-gradient(160deg,#141b33 0%,#1e2848 52%,#26314f 100%);
+  color:#f2ecdd;
+}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:center;padding-top:clamp(34px,5vw,64px);padding-bottom:clamp(34px,5vw,60px);position:relative;z-index:2}
+.hero .kicker{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:12.5px;letter-spacing:.28em;color:var(--gold-soft);margin-bottom:12px}
+.hero h1{
+  font-size:clamp(30px,5.4vw,52px);letter-spacing:.02em;margin-bottom:16px;color:#fff;
+  text-shadow:0 2px 24px rgba(0,0,0,.35);
+}
+.hero h1 em{font-style:normal;color:var(--gold-soft)}
+.hero p.lead{font-size:clamp(15px,1.6vw,17px);color:#d8d2c2;max-width:34em}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;font-size:14.5px;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-gold{background:var(--gold-soft);color:#241d0a;font-weight:600}
+.btn-ghost{border-color:rgba(242,236,221,.45);color:#f2ecdd}
+.hero .stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.hero .stats div{font-size:12.5px;color:#b9b3a3;letter-spacing:.06em}
+.hero .stats strong{display:block;font-size:22px;color:#fff;letter-spacing:0;margin-bottom:2px}
+.herotop{position:absolute;inset:0;z-index:1;pointer-events:none}
+.herotop svg{width:100%;height:100%}
+
+/* 主内容三栏 */
+.layout{display:grid;grid-template-columns:206px minmax(0,1fr) 288px;gap:var(--gap);align-items:start;padding-top:clamp(24px,4vw,42px);padding-bottom:44px}
+aside.left,aside.right{position:sticky;top:calc(var(--announce-h) + var(--head-h) + 14px)}
+.toc, .sidecard{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:16px 16px 12px;
+}
+.toc h2, .sidecard h2{
+  font-size:13px;letter-spacing:.16em;color:var(--muted);margin-bottom:10px;font-weight:600;
+}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc;font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:13.5px}
+.toc li{counter-increment:toc}
+.toc a{
+  display:block;padding:6px 8px 6px 26px;border-radius:6px;color:var(--ink-2);position:relative;line-height:1.5;
+}
+.toc a::before{content:counter(toc,decimal-leading-zero);position:absolute;left:6px;color:#b6ad97;font-size:11.5px;top:8px}
+.toc a.active{background:#fbf2dc;color:#7a5410;font-weight:600}
+.toc a.active::before{color:var(--gold)}
+.sidecard+.sidecard{margin-top:var(--gap)}
+.sidecard ul{list-style:none;margin:0;padding:0;font-size:13.5px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.sidecard li{padding:7px 0;border-bottom:1px dashed #e6dfcf}
+.sidecard li:last-child{border-bottom:0}
+.sidecard li span{color:var(--muted);font-size:12px;display:block}
+main{min-width:0}
+section.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:clamp(18px,2.6vw,30px);margin-bottom:var(--gap);
+}
+section.block>h2{
+  font-size:clamp(19px,2.4vw,23px);margin-bottom:6px;letter-spacing:.01em;
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+}
+section.block>h2 .en{font-size:11.5px;letter-spacing:.2em;color:#a89d84;font-weight:500;font-family:"PingFang SC",sans-serif}
+.block .sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+h3{font-size:16.5px;margin:20px 0 8px;color:var(--ink-2)}
+h4{font-size:15px;margin:14px 0 6px;color:var(--ink-2)}
+
+/* 网格卡片 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{
+  border:1px solid var(--line);border-radius:8px;padding:14px;background:#fffdf8;
+  transition:transform .18s ease,border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:#cdbf9e}
+.card h4{font-size:15px;margin:0 0 6px}
+.card p{font-size:13.8px;color:#4a4636;margin:0}
+.card .meta{font-size:12px;color:var(--muted);margin-top:8px;font-family:"PingFang SC",sans-serif;display:flex;gap:8px;flex-wrap:wrap}
+.tag{display:inline-block;background:#f1ead9;color:#7a5a17;border-radius:4px;padding:1px 7px;font-size:12px;font-family:"PingFang SC",sans-serif}
+.tag.teal{background:#e0eeeb;color:#155e57}
+
+/* 紧凑列表 */
+ul.newslist{list-style:none;margin:0;padding:0}
+ul.newslist li{
+  display:grid;grid-template-columns:74px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed #e6dfcf;
+  align-items:baseline;
+}
+ul.newslist li:last-child{border-bottom:0}
+ul.newslist time{font-size:12px;color:var(--muted);font-family:"PingFang SC",sans-serif}
+ul.newslist a{font-size:14.6px}
+ul.newslist .note{display:block;color:var(--muted);font-size:12.8px;margin-top:2px}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:14px}
+.compare>div{padding:14px 16px}
+.compare .sideA{background:#fdf7e8;border-right:1px solid var(--line)}
+.compare .sideB{background:#eef5f4}
+.compare h4{margin:0 0 8px;font-size:14.5px}
+.compare ul{margin:0;padding-left:18px}
+.compare li{margin-bottom:6px}
+
+/* 编号步骤 */
+ol.steps{counter-reset:st;list-style:none;margin:0;padding:0}
+ol.steps li{
+  counter-increment:st;position:relative;padding:0 0 16px 46px;border-left:2px solid #e6dfcf;margin-left:16px;
+}
+ol.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+ol.steps li::before{
+  content:counter(st);position:absolute;left:-16px;top:-2px;width:30px;height:30px;border-radius:50%;
+  background:var(--ink);color:var(--gold-soft);font-family:"PingFang SC",sans-serif;font-size:14px;
+  display:flex;align-items:center;justify-content:center;font-weight:600;
+}
+ol.steps h4{margin:0 0 4px}
+ol.steps p{font-size:14px;margin:0}
+
+/* 标签索引 */
+.tagindex{display:flex;flex-wrap:wrap;gap:9px}
+.tagindex a{
+  border:1px solid var(--line);background:#fffdf8;border-radius:999px;padding:5px 14px;font-size:13.5px;color:var(--ink-2);
+  font-family:"PingFang SC",sans-serif;
+  transition:transform .15s ease,background .15s ease;
+}
+.tagindex a:hover{background:#f3ead6;text-decoration:none;transform:translateY(-2px)}
+
+/* 深度解析分栏 */
+.deep{display:grid;grid-template-columns:1fr;gap:0}
+.deep .lead-judge{
+  border-left:4px solid var(--gold);background:#fbf6e9;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:18px;
+  font-size:15.5px;
+}
+.checktable{width:100%;border-collapse:collapse;font-size:13.8px;margin:10px 0 4px}
+.checktable th,.checktable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.checktable th{background:#f3eddf;font-family:"PingFang SC",sans-serif;font-size:13px;white-space:nowrap}
+blockquote.quote{
+  margin:16px 0;padding:16px 20px;background:#eef5f4;border-radius:8px;border-left:4px solid var(--teal);
+  font-size:15px;color:#22403c;
+}
+blockquote.quote cite{display:block;font-size:12.5px;color:var(--muted);font-style:normal;margin-top:8px}
+
+/* FAQ */
+details.faq{border:1px solid var(--line);border-radius:8px;background:#fffdf8;margin-bottom:10px;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:12px 40px 12px 16px;font-size:15px;font-weight:600;position:relative;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;list-style:none;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:19px;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+details.faq .ans{padding:0 16px 14px;font-size:14.4px;color:#403c30;border-top:1px dashed #e6dfcf;margin-top:0;padding-top:12px}
+
+/* 评论 */
+.comment{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#fffdf8;margin-bottom:10px}
+.comment .who{font-size:12.5px;color:var(--muted);font-family:"PingFang SC",sans-serif;display:flex;justify-content:space-between;gap:10px;margin-bottom:4px}
+.comment p{margin:0;font-size:14.2px}
+.comment .who .badge{color:#7a5a17;background:#f1ead9;border-radius:4px;padding:0 6px}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 20px;border-left:2px solid #e6dfcf}
+.timeline li{position:relative;padding:0 0 14px 12px}
+.timeline li::before{content:"";position:absolute;left:-25px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold-soft);border:2px solid #fff}
+.timeline time{font-size:12px;color:var(--muted);font-family:"PingFang SC",sans-serif;display:block}
+.timeline strong{font-size:14.5px}
+
+/* 图片 */
+figure{margin:14px 0}
+figure img{border-radius:8px;border:1px solid var(--line);object-fit:cover;width:100%;height:auto}
+figcaption{font-size:12.5px;color:var(--muted);margin-top:6px;font-family:"PingFang SC",sans-serif}
+
+/* 页尾 */
+footer.site{
+  background:var(--ink);color:#c9c3b2;padding:40px 0 26px;font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:13.5px;
+  margin-top:10px;
+}
+footer.site .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px}
+footer.site h3{font-size:14px;color:#f2ecdd;margin:0 0 10px;letter-spacing:.06em}
+footer.site a{color:#c9c3b2}
+footer.site a:hover{color:var(--gold-soft)}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:7px}
+footer .fbrand{display:flex;align-items:center;gap:9px;color:#fff;font-size:16px;font-weight:700;margin-bottom:10px}
+footer .fbrand svg{width:26px;height:26px}
+footer .cols{grid-column:1/-1;border-top:1px solid #33405f;margin-top:10px;padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#8f9ab3}
+
+/* 回到顶部 */
+#totop{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  background:var(--ink);color:var(--gold-soft);border:1px solid #3d4a6b;font-size:18px;cursor:pointer;
+  display:none;align-items:center;justify-content:center;z-index:70;box-shadow:0 4px 14px rgba(0,0,0,.22);
+}
+#totop.show{display:flex}
+#totop:focus-visible{outline:2px solid var(--gold-soft);outline-offset:2px}
+
+.searchhint{font-size:13.5px;color:var(--muted);margin-top:10px;min-height:1.2em}
+.searchhint mark{background:#fdeeb8;color:#4b3a0c;padding:0 2px}
+.hidden-by-search{display:none !important}
+
+@media (max-width:1020px){
+  .layout{grid-template-columns:minmax(0,1fr) 270px}
+  aside.left{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:20px}
+  .hero .art{order:-1;max-width:420px}
+  footer.site .wrap{grid-template-columns:1fr 1fr}
+  nav.mainnav{
+    position:absolute;left:0;right:0;top:calc(var(--announce-h) + var(--head-h));
+    background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 14px 14px;
+    display:none;box-shadow:0 12px 20px rgba(26,35,64,.12);
+  }
+  nav.mainnav.open{display:flex}
+  nav.mainnav a{padding:10px 8px;border-bottom:1px dashed #e6dfcf}
+  .nav-toggle{display:inline-block}
+  header.site .wrap{position:relative}
+  .searchbox input{width:118px}
+}
+@media (max-width:720px){
+  .layout{grid-template-columns:1fr}
+  aside.right{position:static;margin-top:var(--gap)}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .sideA{border-right:0;border-bottom:1px solid var(--line)}
+  header.site{height:auto;min-height:var(--head-h)}
+  header.site .wrap{flex-wrap:wrap;padding-top:8px;padding-bottom:8px;gap:10px}
+  .brand{font-size:15.5px}
+  .searchbox{order:3;width:100%}
+  .searchbox input{flex:1;width:auto}
+  ul.newslist li{grid-template-columns:1fr;gap:2px}
+  .hero .stats{gap:18px}
+  footer.site .wrap{grid-template-columns:1fr}
+  #totop{bottom:14px;right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickbar">
+  <div class="announce">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="txt"><b>周希妍无极圣光</b>条目库更新：11月6日新增第 41 章“圣光反噬”规则对照表，同步补入 3 条读者质疑与版本差异说明。</span>
+      <a href="/#updates">查看更新</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="周希妍无极圣光 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#1a2340"/>
+          <path d="M32 9l5.4 17.6L55 32l-17.6 5.4L32 55l-5.4-17.6L9 32l17.6-5.4z" fill="#e8b64c"/>
+          <circle cx="32" cy="32" r="6.4" fill="#1a2340" stroke="#f6f3ec" stroke-width="1.6"/>
+        </svg>
+        <span>周希妍无极圣光</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainnav">栏目菜单</button>
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">设定概览</a>
+        <a href="/#picks">精选条目</a>
+        <a href="/#updates">更新日志</a>
+        <a href="/#channels">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">阅读指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#voices">读者评论</a>
+      </nav>
+      <div class="searchbox">
+        <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">站内查找</label>
+        <input id="q" type="search" placeholder="查找章节 / 术语" autocomplete="off">
+        <button type="button" id="qbtn">查找</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="herotop" aria-hidden="true">
+    <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e8b64c" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#e8b64c" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="920" cy="120" r="230" fill="url(#g1)"/>
+      <g fill="none" stroke="#e8b64c" stroke-opacity=".28">
+        <circle cx="920" cy="120" r="88"/>
+        <circle cx="920" cy="120" r="132"/>
+        <circle cx="920" cy="120" r="176"/>
+        <path d="M760 400 L920 120 L1080 400" stroke-opacity=".18"/>
+        <path d="M700 470 L920 60 L1140 470" stroke-opacity=".12"/>
+      </g>
+      <g fill="#f2ecdd" fill-opacity=".5">
+        <circle cx="180" cy="90" r="2"/><circle cx="300" cy="200" r="1.6"/>
+        <circle cx="120" cy="330" r="2.2"/><circle cx="420" cy="70" r="1.4"/>
+        <circle cx="520" cy="430" r="1.8"/><circle cx="640" cy="150" r="1.5"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="kicker">角色 · 能力 · 版本对照</div>
+      <h1>周希妍<em>无极圣光</em></h1>
+      <p class="lead">围绕角色周希妍的圣光系能力设定，整理章节出场、施放条件、代价条款与三个流通版本之间的文字差异。所有条目附章节号与原文措辞，可供交叉核对。</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="/#deep">读深度解析</a>
+        <a class="btn btn-ghost" href="/#channels">按分类找条目</a>
+      </div>
+      <div class="stats">
+        <div><strong>41</strong>已收录章节</div>
+        <div><strong>3</strong>流通版本</div>
+        <div><strong>17</strong>核心术语</div>
+        <div><strong>11月6日</strong>最近校订</div>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 420 360" role="img" aria-label="圣光弧线与文字排版示意图" style="width:100%;height:auto">
+        <rect x="1" y="1" width="418" height="358" rx="16" fill="#0f1730" stroke="#3b4766"/>
+        <g stroke="#e8b64c" fill="none">
+          <path d="M60 300 Q210 20 360 300" stroke-opacity=".85" stroke-width="2"/>
+          <path d="M84 300 Q210 70 336 300" stroke-opacity=".45"/>
+          <path d="M108 300 Q210 120 312 300" stroke-opacity=".28"/>
+        </g>
+        <circle cx="210" cy="196" r="7" fill="#f6f3ec"/>
+        <g fill="#f2ecdd" font-family="PingFang SC, sans-serif" font-size="12" fill-opacity=".78">
+          <text x="42" y="66">施放条件 · 星辉满三格</text>
+          <text x="42" y="90">持续 · 约 12 息</text>
+          <text x="42" y="114">代价 · 左臂灼痕递增</text>
+        </g>
+        <g stroke="#3b4766">
+          <line x1="42" y1="140" x2="378" y2="140"/>
+          <line x1="42" y1="322" x2="378" y2="322"/>
+        </g>
+        <text x="42" y="344" fill="#8f9ab3" font-family="PingFang SC, sans-serif" font-size="11.5">第 38 章原文措辞 · 校订 11-06</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+
+  <aside class="left" aria-label="页面目录">
+    <nav class="toc" aria-label="栏目目录">
+      <h2>目录</h2>
+      <ol>
+        <li><a href="/#overview">设定概览</a></li>
+        <li><a href="/#picks">精选条目</a></li>
+        <li><a href="/#updates">更新日志</a></li>
+        <li><a href="/#channels">分类索引</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#voices">读者评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#picks2">相关推荐</a></li>
+        <li><a href="/#timeline">时间线与榜单</a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section class="block" id="overview">
+      <h2>设定概览 <span class="en">OVERVIEW</span></h2>
+      <p class="sub">把散落在第 12 章至第 40 章的描写拼回去，先看清能力长什么样、受什么约束。</p>
+      <p>“无极圣光”在文本里不是一招技能名，而是周希妍从师门残卷中复原的一套光系体系：外显为弧状光带，内里靠“星辉”计格。第 18 章明确写过，光带展开时共七道，最外一道宽度不足一指，内里三道可承住刀锋。读者常把它当成纯攻击手段，忽略了第 22 章之后反复出现的三处限制——施放要提前两息结印、受术者若心怀杀意则光带退散、左臂灼痕每加深一寸，施放距离缩短一尺。</p>
+      <div class="grid3">
+        <div class="card">
+          <h4>施放结构</h4>
+          <p>七道光带由内向外依次展开，第 4 道是切割主力，第 7 道只用于控场封锁退路。</p>
+          <div class="meta"><span class="tag">第 18 章</span><span>原文</span></div>
+        </div>
+        <div class="card">
+          <h4>星辉计量</h4>
+          <p>满三格可放一次完整形态；一格时只能维持护体，不足一格光带会自行崩散。</p>
+          <div class="meta"><span class="tag teal">第 25 章</span><span>规则</span></div>
+        </div>
+        <div class="card">
+          <h4>代价条款</h4>
+          <p>灼痕自腕向肘蔓延，第 37 章已到肘弯。文中没写痊愈方式，只写“夜里发烫”。</p>
+          <div class="meta"><span class="tag">第 37 章</span><span>代价</span></div>
+        </div>
+      </div>
+      <figure>
+        <img src="https://picsum.photos/seed/zhouxinyan-overview/880/330" width="880" height="330" loading="lazy" alt="示意：七道光带由内向外展开的层次排布">
+        <figcaption>示意图仅表示光带层次，非正文插图。</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="picks">
+      <h2>精选条目 <span class="en">PICKS</span></h2>
+      <p class="sub">按可核对价值挑出的五条，每条都附章节位置与一句原文关键处。</p>
+      <div class="grid2">
+        <div class="card">
+          <h4>圣光反噬的触发阈值</h4>
+          <p>第 41 章写“星辉尽而光未收”，是全书第一次给出明确触发条件。此前只写现象。</p>
+          <div class="meta"><span class="tag">第 41 章</span><span>新规则</span></div>
+        </div>
+        <div class="card">
+          <h4>左臂灼痕与距离衰减</h4>
+          <p>灼痕每深一寸、有效距离减一尺，第 33 章与第 37 章两处数字一致，可信度较高。</p>
+          <div class="meta"><span class="tag teal">第 33 / 37 章</span><span>数据</span></div>
+        </div>
+        <div class="card">
+          <h4>周希妍与师姐的三次对照</h4>
+          <p>同门同源，师姐只用一道光带却能破阵，差别在结印顺序而非星辉总量。</p>
+          <div class="meta"><span class="tag">第 29 章</span><span>对照</span></div>
+        </div>
+        <div class="card">
+          <h4>“无极”二字的来历争议</h4>
+          <p>残卷封面题字与师门口述不一致，第 15 章与第 36 章各给一版，谁先谁后未定。</p>
+          <div class="meta"><span class="tag">版本差异</span><span>存疑</span></div>
+        </div>
+        <div class="card">
+          <h4>护体形态的三种误读</h4>
+          <p>护体不等于无敌，第 26 章光带被重锤砸出缺口，缺口位置与结印手型有关。</p>
+          <div class="meta"><span class="tag teal">第 26 章</span><span>辨析</span></div>
+        </div>
+        <div class="card">
+          <h4>夜战场景的光照副作用</h4>
+          <p>第 31 章写光带照亮三十步内，暴露位置，反被对手预判落点。强度与隐蔽成反比。</p>
+          <div class="meta"><span class="tag">第 31 章</span><span>战例</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="updates">
+      <h2>更新日志 <span class="en">UPDATES</span></h2>
+      <p class="sub">按日期倒序，只记新增与改订，不复述旧内容。</p>
+      <ul class="newslist">
+        <li><time>11月6日</time><span><a href="/#deep">补入第 41 章“圣光反噬”规则对照表</a><span class="note">新增触发条件 1 条，标注与其他版本的措辞差 2 处。</span></span></li>
+        <li><time>11月4日</time><span><a href="/#channels">分类索引新增“结印手型”类目</a><span class="note">目前收 4 条，含第 19、26、33、38 章。</span></span></li>
+        <li><time>11月2日</time><span><a href="/#faq">FAQ 增补“护体能否挡重击”一问</a><span class="note">答案引用第 26 章缺口描写，未采用读者推测。</span></span></li>
+        <li><time>10月30日</time><span><a href="/#voices">读者评论整理第二批，共 9 条</a><span class="note">保留 3 条质疑，其中 2 条指向第 37 章灼痕描写前后不一。</span></span></li>
+        <li><time>10月27日</time><span><a href="/#timeline">时间线补入三条出场节点</a><span class="note">第 12、22、29 章，与人物年龄线对齐。</span></span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="channels">
+      <h2>分类索引 <span class="en">INDEX</span></h2>
+      <p class="sub">按读者会直接搜的类别词切分，每个词对应一组条目。</p>
+      <div class="tagindex">
+        <a href="/#overview">圣光七道</a>
+        <a href="/#overview">星辉计格</a>
+        <a href="/#deep">圣光反噬</a>
+        <a href="/#picks">左臂灼痕</a>
+        <a href="/#picks">结印手型</a>
+        <a href="/#guide">护体形态</a>
+        <a href="/#deep">施放距离衰减</a>
+        <a href="/#picks">同门对照</a>
+        <a href="/#timeline">出场章节年表</a>
+        <a href="/#news">版本差异</a>
+        <a href="/#faq">代价条款</a>
+        <a href="/#picks2">同人创作</a>
+        <a href="/#voices">读者争议</a>
+      </div>
+    </section>
+
+    <section class="block" id="deep">
+      <h2>深度解析 <span class="en">ANALYSIS</span></h2>
+      <p class="sub">全页唯一的判断区。三个可反驳的结论，各附核对路径。</p>
+
+      <div class="deep">
+        <div class="lead-judge">
+          <strong>总判断：</strong>第 41 章之后，这套体系的强度上限已经被代价条款锁死。凡是把它描述为“越打越强”的解读，都与第 33、37、41 章三处数字冲突——灼痕加深、距离缩短、星辉耗尽即反噬，三条同时成立时，长时间作战必输。
+        </div>
+
+        <h3>一、灼痕是计时器，不是装饰</h3>
+        <p>第 33 章第一次给出量化：“灼痕过寸，光退一尺。”第 37 章复查，灼痕已从腕到肘弯，按文中比例约三寸。也就是说，同一招的有效距离在四章之内缩了三尺。这个数字在整本书里只出现两次，但两次一致，置信度高于其他模糊描写。</p>
+        <p>如果灼痕只作视觉描写，作者没必要给出“寸”和“尺”两个可对照的单位。给出单位就意味着可核算。按第 35 章的一次交手记录，周希妍在三十步外施放，光带抵达时只剩外层两道，正对应缩短后的距离。反方常引第 22 章“光带可随心意伸缩”来反驳，但那一段写的是宽度变化，不是距离。</p>
+
+        <table class="checktable">
+          <thead><tr><th>核对项</th><th>章节</th><th>原文关键措辞</th><th>可否证伪</th></tr></thead>
+          <tbody>
+            <tr><td>距离衰减比</td><td>第 33 章</td><td>灼痕过寸，光退一尺</td><td>若后续章节出现超距施放，即被否定</td></tr>
+            <tr><td>灼痕进度</td><td>第 37 章</td><td>自腕至肘，夜里发烫</td><td>需比对时间跨度是否合理</td></tr>
+            <tr><td>反噬触发</td><td>第 41 章</td><td>星辉尽而光未收</td><td>取决于是否还有未收光的战例</td></tr>
+          </tbody>
+        </table>
+
+        <h3>二、师姐的“一道光”暴露的是结印顺序问题</h3>
+        <p>第 29 章写师姐只放一道光带就破了阵，周希妍七道齐出仍被弹回。同一段里，作者把差别落在结印：师姐先结“定”再结“引”，周希妍顺序相反。这不是天赋差，是步骤差。按文中描写，顺序颠倒会让七道光带互相挤占，外层提前崩散。</p>
+        <p>这一条可以被反驳。第 29 章的叙述者是场边弟子，视角有限，未必看清师姐完整手型；第 38 章周希妍自己复盘时也只说“先定后引”，没提师姐用了几个印。所以更稳妥的表述是：现有文本支持顺序差异，但不排除星辉存量也有影响。把两种可能并列，比一口咬定更接近原文。</p>
+
+        <blockquote class="quote">
+          第 38 章原文：“先定而后引，光不散；先引而后定，光自相撞。”<cite>——周希妍在手札中的自我复盘，与第 29 章战况可互相印证</cite>
+        </blockquote>
+
+        <h3>三、版本差异集中在“无极”二字的解释上</h3>
+        <p>三个流通版本对“无极”的处理不同。甲版第 15 章写残卷封面原有题字，乙版删去题字改由师父口述，丙版两处都保留但措辞相差六个字。差异不影响能力描述，只影响来源叙述。读者若只读一个版本，会误以为“无极”是师门赐名；把三版并排看，才知道题字与口述本就不是同一来源。</p>
+        <div class="compare">
+          <div class="sideA">
+            <h4>甲版（第 15 章）</h4>
+            <ul>
+              <li>残卷封面有题字</li>
+              <li>未写题字作者</li>
+              <li>师父未作解释</li>
+            </ul>
+          </div>
+          <div class="sideB">
+            <h4>乙版（第 15 章）</h4>
+            <ul>
+              <li>删去封面题字</li>
+              <li>改为师父口述“无极”</li>
+              <li>增加一句“取无边界之意”</li>
+            </ul>
+          </div>
+        </div>
+        <p>这三条判断都可以被新章节推翻。第 41 章刚补的触发条件就修正了此前“星辉耗尽只是虚弱”的说法。判断写在这里，随时准备改。</p>
+      </div>
+    </section>
+
+    <section class="block" id="guide">
+      <h2>体验指南 <span class="en">GUIDE</span></h2>
+      <p class="sub">第一次接触这套设定，按下面顺序读，比从第 1 章硬啃省力。</p>
+      <ol class="steps">
+        <li>
+          <h4>先读第 18 章，建立画面</h4>
+          <p>七道光带的层次、宽度、用途在这一章一次给全。跳过它，后面所有战斗描写都会缺参照。</p>
+        </li>
+        <li>
+          <h4>再读第 25 章，记住星辉三格</h4>
+          <p>计量单位只有这一处讲清。读到后文“一格护体”时，能立刻判断角色还剩多少余地。</p>
+        </li>
+        <li>
+          <h4>第 33 章与第 37 章连读</h4>
+          <p>两处数字要对照看，单独读任一章都容易把灼痕当成纯粹的气氛描写。</p>
+        </li>
+        <li>
+          <h4>最后读第 41 章，修正预期</h4>
+          <p>反噬条款出来后，前面“越战越勇”的印象需要全部下调，否则会与结局走向冲突。</p>
+        </li>
+      </ol>
+      <p style="margin-top:14px">如果只想快速了解争议点，直接跳到下面常见问题里的“护体能否挡重击”与“灼痕会不会痊愈”两问，答案都附了章节位置。</p>
+    </section>
+
+    <section class="block" id="faq">
+      <h2>常见问题 <span class="en">FAQ</span></h2>
+      <p class="sub">问法来自读者实际搜索，答案尽量落到章节与原文。</p>
+
+      <details class="faq">
+        <summary>护体形态能挡住重击吗？</summary>
+        <div class="ans">挡得住一部分，但有缺口。第 26 章写重锤落下时护体光带被砸出缺口，缺口位置在左上，与结印时左手抬起的角度对应。同一章后文写周希妍换了手型，第二次硬接才没有破。所以答案取决于结印手型，不是护体本身强弱。</div>
+      </details>
+
+      <details class="faq">
+        <summary>左臂灼痕会不会痊愈？</summary>
+        <div class="ans">现有章节没写痊愈方式。第 37 章只写“夜里发烫”，第 38 章手札里提到“以静养缓其势”，但没有给出恢复时间。三个版本在这一段措辞一致，可信度较高。任何说“后期会自动消退”的说法，目前找不到原文支撑。</div>
+      </details>
+
+      <details class="faq">
+        <summary>圣光反噬具体在什么条件下发生？</summary>
+        <div class="ans">第 41 章给出的条件是“星辉尽而光未收”，即三格耗尽后仍未收束光带。此前章节只写反噬后的外伤，没写触发门槛。这条新规则修正了早先“耗尽只是虚弱”的理解，阅读时需要注意章节先后。</div>
+      </details>
+
+      <details class="faq">
+        <summary>周希妍和师姐的差距到底在哪？</summary>
+        <div class="ans">第 29 章把差距落在结印顺序：先定后引，光不相撞。周希妍当时是反序，七道光带互相挤占，外层提前崩散。不过叙述者是场边弟子，视角有限，所以这个结论需要用第 38 章的自述交叉验证，而不能只看一处。</div>
+      </details>
+
+      <details class="faq">
+        <summary>“无极”是师门赐名还是残卷原名？</summary>
+        <div class="ans">取决于读哪个版本。甲版写残卷封面有题字，乙版删掉题字改为师父口述，丙版两处都留。三种处理对能力规则没影响，只影响来源叙述。若只读单一版本，容易把两种来源混为一谈。</div>
+      </details>
+    </section>
+
+    <section class="block" id="voices">
+      <h2>读者评论 <span class="en">VOICES</span></h2>
+      <p class="sub">保留原语气，包括质疑与吐槽；指名到章节的评论不做删改。</p>
+
+      <div class="comment">
+        <div class="who"><span>林渡（追更至第 41 章）</span><span class="badge">质疑</span></div>
+        <p>第 37 章灼痕到肘弯，第 33 章才刚过一寸，中间隔了两场大戏却没写伤势加重，时间线看着别扭。要么中间补一场，要么把“寸”改成模糊说法。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>浮光拾页</span><span>11月5日</span></div>
+        <p>七道光带的层次写得很细，第四道做切割这个设定读起来顺手，打斗时能想象出画面。比起动不动就“漫天光雨”，这种有编号的写法更耐读。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>旧砚台</span><span class="badge">指向条目</span></div>
+        <p>第 29 章师姐破阵那段，我不太同意“结印顺序决定一切”的说法。场边弟子连站位都看不清，怎么看清手指？更可能师姐星辉存量本来就高。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>半盏茶</span><span>11月3日</span></div>
+        <p>护体形态被重锤砸出缺口写得挺实在，至少没把主角写成无敌。左上那个缺口后来换了手型才补上，这个细节我回看了两遍。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>夜航船</span><span class="badge">中性</span></div>
+        <p>坦白讲，代价条款出来之后，前面几场战斗的紧张感反而掉了。知道有灼痕计时，就大概能算出还能打多久，悬念少了些。不过这种可计算的写法也有好处，至少不糊弄。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>南枝</span><span>11月6日</span></div>
+        <p>第 41 章“星辉尽而光未收”这一句挺关键，终于把反噬说清楚了。之前一直以为是情绪失控才反噬，看来是我想多了。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>断续风</span><span class="badge">吐槽</span></div>
+        <p>三个版本并排看真的累。题字一会儿有一会儿没有，师父一会儿解释一会儿不解释。能不能统一一版，读者不用自己做校勘。</p>
+      </div>
+      <div class="comment">
+        <div class="who"><span>青梧</span><span>11月4日</span></div>
+        <p>第 31 章夜战暴露位置那段写得有意思，光太亮反而被预判落点，这种自带副作用的设定比纯增益可信。就是不知道后面会不会针对这点做文章。</p>
+      </div>
+    </section>
+
+    <section class="block" id="news">
+      <h2>相关资讯 <span class="en">NEWS</span></h2>
+      <p class="sub">与条目相关的外部动态与文本修订消息，按时间排列。</p>
+      <ul class="newslist">
+        <li><time>11月7日</time><span><a href="/#deep">连载平台发布第 41 章修订说明</a><span class="note">作者在章末补一句“反噬门槛此前未写清”，与本页 11 月 6 日的对照表一致。</span></span></li>
+        <li><time>11月5日</time><span><a href="/#voices">读者整理的版本差异表在讨论区流传</a><span class="note">表格列了甲、乙两版第 15 章的六个字差，未含丙版。</span></span></li>
+        <li><time>11月1日</time><span><a href="/#timeline">同人画师发布圣光七道层次图</a><span class="note">按第 18 章宽度描写绘制，第四道特意加粗。</span></span></li>
+        <li><time>10月29日</time><span><a href="/#faq">问答区集中出现灼痕恢复问题</a><span class="note">当日 12 条提问中 7 条同问，回复均指向第 37、38 章。</span></span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="picks2">
+      <h2>相关推荐 <span class="en">RECOMMEND</span></h2>
+      <p class="sub">按你正在看的条目延伸，都是可核对的具体对象。</p>
+      <div class="tagindex">
+        <a href="/#deep">星辉三格耗尽战例复盘</a>
+        <a href="/#picks">第 26 章护体缺口方位图</a>
+        <a href="/#guide">先定后引结印顺序拆解</a>
+        <a href="/#picks">同门三人能力对照表</a>
+        <a href="/#news">甲乙丙三版第 15 章文字差</a>
+        <a href="/#voices">读者对灼痕时间线的质疑</a>
+        <a href="/#timeline">周希妍出场章节年表</a>
+        <a href="/#deep">施放距离衰减的两次数字</a>
+      </div>
+    </section>
+
+    <section class="block" id="timeline">
+      <h2>时间线与榜单 <span class="en">TIMELINE</span></h2>
+      <p class="sub">左侧是文本内出场节点，右侧是读者讨论热度排序，两者不混用。</p>
+      <div class="grid2">
+        <div>
+          <h3>出场章节时间线</h3>
+          <ul class="timeline">
+            <li><time>第 12 章</time><strong>首次提及残卷</strong><br><span style="font-size:13.5px;color:#4a4636">只有一句“匣中旧纸”，未点能力名。</span></li>
+            <li><time>第 18 章</time><strong>七道光带首次完整展开</strong><br><span style="font-size:13.5px;color:#4a4636">层次、宽度、用途一次给全。</span></li>
+            <li><time>第 22 章</time><strong>护体形态首次使用</strong><br><span style="font-size:13.5px;color:#4a4636">同章出现“可随心意伸缩”一句，指宽度。</span></li>
+            <li><time>第 29 章</time><strong>与师姐同场对照</strong><br><span style="font-size:13.5px;color:#4a4636">一道光破阵，引出结印顺序差异。</span></li>
+            <li><time>第 37 章</time><strong>灼痕蔓延至肘弯</strong><br><span style="font-size:13.5px;color:#4a4636">“夜里发烫”，未提痊愈。</span></li>
+            <li><time>第 41 章</time><strong>反噬触发条件公开</strong><br><span style="font-size:13.5px;color:#4a4636">“星辉尽而光未收”。</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>讨论热度榜（示例统计）</h3>
+          <ul class="newslist">
+            <li><time>01</time><span><a href="/#deep">圣光反噬的触发门槛</a><span class="note">11 月 6 日至 7 日新增讨论 34 条。</span></span></li>
+            <li><time>02</time><span><a href="/#faq">灼痕能否痊愈</a><span class="note">10 月 29 日单日 7 条同问。</span></span></li>
+            <li><time>03</time><span><a href="/#picks">第 26 章护体缺口方位</a><span class="note">配图讨论集中在左手角度。</span></span></li>
+            <li><time>04</time><span><a href="/#picks">师姐一道光破阵是否合理</a><span class="note">分歧集中在叙述者视角。</span></span></li>
+            <li><time>05</time><span><a href="/#news">三版本“无极”题字差异</a><span class="note">10 月 30 日后热度回落。</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="terms">
+      <h2>术语小词典 <span class="en">TERMS</span></h2>
+      <p class="sub">读正文前先扫一遍，遇到不熟的词回到这里。</p>
+      <div class="grid3">
+        <div class="card"><h4>星辉</h4><p>能力计量单位，满三格。一格时只能维持护体，不足一格光带自行崩散。见第 25 章。</p></div>
+        <div class="card"><h4>光带</h4><p>外显形态，共七道。第四道承切割，第七道控场。宽度描写见第 18 章。</p></div>
+        <div class="card"><h4>结印</h4><p>施放前置动作，需提前两息完成。顺序影响光带是否互相挤占。见第 38 章。</p></div>
+        <div class="card"><h4>灼痕</h4><p>代价外显，自腕向肘蔓延，每深一寸有效距离减一尺。见第 33、37 章。</p></div>
+        <div class="card"><h4>反噬</h4><p>星辉耗尽而光未收时的反作用。第 41 章首次给出门槛。</p></div>
+        <div class="card"><h4>定与引</h4><p>两个基础印式。先定后引则不散，反序则自撞。第 29、38 章互证。</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="right" aria-label="侧栏">
+    <div class="sidecard">
+      <h2>本页速查</h2>
+      <ul>
+        <li><a href="/#deep">反噬触发条件</a><span>第 41 章 · 11月6日校订</span></li>
+        <li><a href="/#picks">灼痕与距离衰减</a><span>第 33 / 37 章 · 数字一致</span></li>
+        <li><a href="/#picks">护体缺口方位</a><span>第 26 章 · 左上</span></li>
+        <li><a href="/#news">三版本题字差异</a><span>第 15 章 · 甲 / 乙 / 丙</span></li>
+      </ul>
+    </div>
+    <div class="sidecard">
+      <h2>互动入口</h2>
+      <ul>
+        <li><a href="/#voices">写下你的质疑</a><span>指名章节的评论优先保留</span></li>
+        <li><a href="/#faq">提交新问题</a><span>11月已有 12 条被采纳</span></li>
+        <li><a href="/#updates">订阅校订日志</a><span>每次改订标注日期与条目</span></li>
+      </ul>
+    </div>
+    <div class="sidecard">
+      <h2>版本提示</h2>
+      <p style="font-size:13.5px;margin:0;color:#4a4636">正文引用以丙版为准；涉及第 15 章时并列甲乙两版措辞。若你手边是其他版本，章节号可能整体错位一至两章。</p>
+    </div>
+  </aside>
+</div>
+
+<div class="wrap">
+  <p class="searchhint" id="searchhint" role="status" aria-live="polite"></p>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="fbrand">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#26314f"/>
+          <path d="M32 9l5.4 17.6L55 32l-17.6 5.4L32 55l-5.4-17.6L9 32l17.6-5.4z" fill="#e8b64c"/>
+        </svg>
+        <span>周希妍无极圣光</span>
+      </div>
+      <p>把一部连载里散落的能力描写逐章拆开，标上章节号、单位与版本差，方便回查原句，也方便反驳这里的判断。</p>
+    </div>
+    <div>
+      <h3>条目分组</h3>
+      <ul>
+        <li><a href="/#overview">七道光带与星辉计格</a></li>
+        <li><a href="/#deep">反噬门槛与代价条款</a></li>
+        <li><a href="/#picks">同门能力对照</a></li>
+        <li><a href="/#channels">分类索引</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>阅读与互动</h3>
+      <ul>
+        <li><a href="/#guide">四步阅读顺序</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#voices">读者评论</a></li>
+        <li><a href="/#updates">校订日志</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>说明</h3>
+      <ul>
+        <li>章节编号与原文措辞为示例整理</li>
+        <li>版本差异据三版流通文本记录</li>
+        <li>讨论热度为示例统计，非平台数据</li>
+        <li>页脚更新：11月6日，对应第 41 章对照表</li>
+      </ul>
+    </div>
+    <div class="cols">
+      <span>示例内容站点 · 角色设定整理</span>
+      <span>© 2026 周希妍无极圣光条目库</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('mainnav');
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A' && window.matchMedia('(max-width:1020px)').matches){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var top=document.getElementById('totop');
+  function onScroll(){
+    if(window.scrollY>420){top.classList.add('show');}else{top.classList.remove('show');}
+    highlight();
+  }
+  top.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  var tocLinks=Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var targets=tocLinks.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+(window.innerHeight*0.28);
+    var idx=-1;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i] && targets[i].offsetTop<=pos){idx=i;}
+    }
+    tocLinks.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  highlight();
+
+  var q=document.getElementById('q');
+  var qbtn=document.getElementById('qbtn');
+  var hint=document.getElementById('searchhint');
+  var units=Array.prototype.slice.call(document.querySelectorAll('main .card, main .comment, main .newslist li, main details.faq, main .timeline li, main .tagindex a'));
+  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+  function run(){
+    var kw=q.value.trim();
+    units.forEach(function(u){u.classList.remove('hidden-by-search');});
+    if(!kw){
+      hint.textContent='';
+      return;
+    }
+    var re=new RegExp(esc(kw),'i');
+    var hit=0;
+    units.forEach(function(u){
+      if(re.test(u.textContent)){hit++;}else{u.classList.add('hidden-by-search');}
+    });
+    var blocks=document.querySelectorAll('main section.block');
+    blocks.forEach(function(b){
+      var visible=b.querySelectorAll('.card:not(.hidden-by-search),.comment:not(.hidden-by-search),.newslist li:not(.hidden-by-search),details.faq:not(.hidden-by-search),.timeline li:not(.hidden-by-search),.tagindex a:not(.hidden-by-search)');
+      if(visible.length===0 && b.querySelectorAll('.card,.comment,.newslist li,details.faq,.timeline li,.tagindex a').length>0){
+        b.classList.add('hidden-by-search');
+      }else{
+        b.classList.remove('hidden-by-search');
+      }
+    });
+    if(hit===0){
+      hint.innerHTML='没有找到与“<mark>'+kw.replace(/[<>&]/g,'')+'</mark>”匹配的条目，可换用章节号（如 第 41 章）、术语（如 灼痕、星辉、结印）再试。';
+    }else{
+      hint.textContent='找到 '+hit+' 条相关条目，已隐藏其余内容；清空输入框恢复全量。';
+    }
+  }
+  qbtn.addEventListener('click',run);
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();run();}
+  });
+  q.addEventListener('input',function(){
+    if(q.value.trim()===''){run();}
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"周希妍无极圣光",
+  "description":"整理角色周希妍的圣光系能力设定，含章节出场、施放条件、代价条款与版本差异对照。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"护体形态能挡住重击吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"挡得住一部分，但有缺口。第 26 章写重锤落下时护体光带被砸出缺口，缺口位置在左上，与结印时左手抬起的角度对应。换手型后第二次硬接才没有破。"}
+    },
+    {
+      "@type":"Question",
+      "name":"左臂灼痕会不会痊愈？",
+      "acceptedAnswer":{"@type":"Answer","text":"现有章节没写痊愈方式。第 37 章只写夜里发烫，第 38 章手札提到以静养缓其势，但没有恢复时间。"}
+    },
+    {
+      "@type":"Question",
+      "name":"圣光反噬具体在什么条件下发生？",
+      "acceptedAnswer":{"@type":"Answer","text":"第 41 章给出的条件是星辉尽而光未收，即三格耗尽后仍未收束光带。此前章节只写反噬后的外伤。"}
+    },
+    {
+      "@type":"Question",
+      "name":"周希妍和师姐的差距到底在哪？",
+      "acceptedAnswer":{"@type":"Answer","text":"第 29 章把差距落在结印顺序：先定后引，光不相撞。周希妍当时反序，七道光带互相挤占，外层提前崩散。该结论需用第 38 章自述交叉验证。"}
+    },
+    {
+      "@type":"Question",
+      "name":"“无极”是师门赐名还是残卷原名？",
+      "acceptedAnswer":{"@type":"Answer","text":"取决于版本。甲版写残卷封面有题字，乙版删去题字改为师父口述，丙版两处都留。对能力规则无影响，只影响来源叙述。"}
+    }
+  ]
+}
+</script>
+</body>
+                </html>
